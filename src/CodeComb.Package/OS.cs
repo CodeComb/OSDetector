@@ -36,7 +36,7 @@ namespace CodeComb.Package
                 var env = services.GetService<IRuntimeEnvironment>();
                 if (env.OperatingSystem == "Windows")
                     return OSType.Windows;
-                else if (env.OperatingSystem == "Mac")
+                else if (env.OperatingSystem == "Darwin")
                     return OSType.OSX;
                 else
                     return OSType.Linux;
