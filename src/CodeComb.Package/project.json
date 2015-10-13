@@ -1,6 +1,6 @@
 ﻿{
   "title": "CodeComb.Package",
-  "version": "2.0.0-*",
+  "version": "2.0.0-beta8",
   "description": "ASP.Net vNext Package Management Library",
   "copyright": "Harbin Code Comb Technology Co.,Ltd",
   "authors": [ "AmamiyaYuuko" ],
@@ -24,8 +24,8 @@
     },
     "dnx451": {
       "dependencies": {
-        "Microsoft.Extensions.DependencyInjection": "1.0.0-*",
-        "Microsoft.Dnx.Runtime": "1.0.0-*"
+        "Microsoft.Framework.DependencyInjection": "1.0.0-beta8",
+        "Microsoft.Dnx.Runtime": "1.0.0-beta8"
       },
       "frameworkAssemblies": {
         "System.IO.Compression": "4.0.0.0",
@@ -43,8 +43,8 @@
         "System.IO.Compression": "4.0.1-beta-23225",
         "System.Net.Http": "4.0.1-beta-23225",
         "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-beta-23225",
-        "Microsoft.Extensions.DependencyInjection": "1.0.0-*",
-        "Microsoft.Dnx.Runtime": "1.0.0-*"
+        "Microsoft.Framework.DependencyInjection": "1.0.0-beta8",
+        "Microsoft.Dnx.Runtime": "1.0.0-beta8"
       }
     }
   }
