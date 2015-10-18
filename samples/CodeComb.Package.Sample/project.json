@@ -1,0 +1,29 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "CodeComb.Package.Sample Console Application",
+  "authors": [ "Yuuko" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "CodeComb.Package": "2.0.0-*"
+  },
+
+  "commands": {
+    "CodeComb.Package.Sample": "CodeComb.Package.Sample"
+  },
+
+  "frameworks": {
+    "dnx451": { },
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23409",
+        "System.Collections": "4.0.11-beta-23409",
+        "System.Console": "4.0.0-beta-23409",
+        "System.Linq": "4.0.1-beta-23409",
+        "System.Threading": "4.0.11-beta-23409"
+      }
+    }
+  }
+}

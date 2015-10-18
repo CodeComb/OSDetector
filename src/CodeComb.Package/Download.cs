@@ -27,8 +27,12 @@ namespace CodeComb.Package
             {
                 foreach (var x in archive.Entries)
                 {
+                    if (!Directory.Exists(Path.GetDirectoryName(dest + x.FullName)))
+                        Directory.CreateDirectory(Path.GetDirectoryName(dest + x.FullName));
+                    if (x.Length == 0 && string.IsNullOrEmpty(Path.GetExtension(x.FullName)))
+                        continue;
                     using (var entryStream = x.Open())
-                    using (var destStream = File.OpenWrite(dest+x.FullName))
+                    using (var destStream = File.OpenWrite(dest + x.FullName))
                     {
                         entryStream.CopyTo(destStream);
                     }
