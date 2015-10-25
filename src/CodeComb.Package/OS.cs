@@ -24,7 +24,7 @@ namespace CodeComb.Package
         {
             get
             {
-#if DNXCORE50
+#if DNXCORE50 || DOTNET5_4
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     return OSType.Windows;
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))

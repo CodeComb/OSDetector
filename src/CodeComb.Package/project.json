@@ -32,7 +32,7 @@
         "System.Net.Http": "4.0.0.0"
       }
     },
-    "dnxcore50": {
+    "dotnet5.4": {
       "dependencies": {
         "Microsoft.CSharp": "4.0.1-*",
         "System.Collections": "4.0.11-*",
