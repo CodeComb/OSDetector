@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 #if DNXCORE50 || DNX451
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.Dnx.Runtime;
-using Microsoft.Dnx.Runtime.Infrastructure;
 #endif
 
 namespace CodeComb.Package
