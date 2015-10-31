@@ -2206,7 +2206,7 @@
           "runtimes/win7/lib/DNXCore50/System.Net.Http.dll": {}
         }
       },
-      "runtime.win7.System.Private.Uri/4.0.1-beta-23409": {
+      "runtime.win7.System.Private.Uri/4.0.1-beta-23420": {
         "type": "package",
         "compile": {
           "ref/dotnet/_._": {}
@@ -3365,7 +3365,7 @@
           "runtimes/win7/lib/DNXCore50/System.Net.Http.dll": {}
         }
       },
-      "runtime.win7.System.Private.Uri/4.0.1-beta-23409": {
+      "runtime.win7.System.Private.Uri/4.0.1-beta-23420": {
         "type": "package",
         "compile": {
           "ref/dotnet/_._": {}
@@ -4517,14 +4517,14 @@
         "runtimes/win7/lib/netcore50/System.Net.Http.dll"
       ]
     },
-    "runtime.win7.System.Private.Uri/4.0.1-beta-23409": {
+    "runtime.win7.System.Private.Uri/4.0.1-beta-23420": {
       "type": "package",
       "serviceable": true,
-      "sha512": "9mcAednoAbDrL5t/GBPYFCfrxYaGxfvpkSkAt3LWQeCH0rp4PlJpOQNtIALcyCfG4lD+z0YBAXEQsZmMVs6C+Q==",
+      "sha512": "ma8hss0pF7vpwaxIwItf1lFhEWBbdL3IGxGQ12wA0Jkla86d5pUX9C+gCB6fGJR7Xe0geSeugFL96a5U1vaOMQ==",
       "files": [
         "ref/dotnet/_._",
-        "runtime.win7.System.Private.Uri.4.0.1-beta-23409.nupkg",
-        "runtime.win7.System.Private.Uri.4.0.1-beta-23409.nupkg.sha512",
+        "runtime.win7.System.Private.Uri.4.0.1-beta-23420.nupkg",
+        "runtime.win7.System.Private.Uri.4.0.1-beta-23420.nupkg.sha512",
         "runtime.win7.System.Private.Uri.nuspec",
         "runtimes/win7/lib/DNXCore50/System.Private.Uri.dll",
         "runtimes/win7/lib/netcore50/System.Private.Uri.dll",
