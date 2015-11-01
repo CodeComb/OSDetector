@@ -15,7 +15,7 @@
     "DNXCore,Version=v5.0": {
       "CodeComb.Package/2.0.0": {
         "type": "project",
-        "framework": "DNXCore,Version=v5.0",
+        "framework": ".NETPlatform,Version=v5.4",
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
           "Microsoft.Extensions.DependencyInjection": "1.0.0",
@@ -539,7 +539,7 @@
     "DNXCore,Version=v5.0/win7-x86": {
       "CodeComb.Package/2.0.0": {
         "type": "project",
-        "framework": "DNXCore,Version=v5.0",
+        "framework": ".NETPlatform,Version=v5.4",
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
           "Microsoft.Extensions.DependencyInjection": "1.0.0",
@@ -1289,7 +1289,7 @@
     "DNXCore,Version=v5.0/win7-x64": {
       "CodeComb.Package/2.0.0": {
         "type": "project",
-        "framework": "DNXCore,Version=v5.0",
+        "framework": ".NETPlatform,Version=v5.4",
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
           "Microsoft.Extensions.DependencyInjection": "1.0.0",
