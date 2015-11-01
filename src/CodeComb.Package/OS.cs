@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Runtime.InteropServices;
-#if DNXCORE50 || DNX451
+#if DNXCORE50 || DNX451 || DOTNET5_4
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.PlatformAbstractions;
-using Microsoft.Dnx.Runtime;
+#endif
+#if DNXCORE50 || DOTNET5_4
+using System.Runtime.InteropServices;
 #endif
 
 namespace CodeComb.Package
@@ -28,15 +25,6 @@ namespace CodeComb.Package
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     return OSType.Windows;
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                    return OSType.OSX;
-                else
-                    return OSType.Linux;
-#elif DNX451
-                var services = CallContextServiceLocator.Locator.ServiceProvider;
-                var env = services.GetService<IRuntimeEnvironment>();
-                if (env.OperatingSystem == "Windows")
-                    return OSType.Windows;
-                else if (env.OperatingSystem == "Darwin")
                     return OSType.OSX;
                 else
                     return OSType.Linux;

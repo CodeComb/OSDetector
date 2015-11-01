@@ -21,12 +21,8 @@
         "System.IO.Compression": "4.0.0.0",
         "System.Net.Http": "4.0.0.0"
       }
-    },
+    }, 
     "net451": {
-      "dependencies": {
-        "Microsoft.Extensions.DependencyInjection": "1.0.0-*",
-        "Microsoft.Dnx.Runtime": "1.0.0-*"
-      },
       "frameworkAssemblies": {
         "System.IO.Compression": "4.0.0.0",
         "System.Net.Http": "4.0.0.0"
@@ -37,14 +33,14 @@
         "Microsoft.CSharp": "4.0.1-*",
         "System.Collections": "4.0.11-*",
         "System.Linq": "4.0.1-*",
+        "System.Console": "4.0.0-*",
         "System.Runtime": "4.0.21-*",
         "System.Threading": "4.0.11-*",
-        "System.Diagnostics.Process": "4.0.0-*",
+        "System.IO.FileSystem": "4.0.1-*",
         "System.IO.Compression": "4.0.1-*",
         "System.Net.Http": "4.0.1-*",
         "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-*",
-        "Microsoft.Extensions.DependencyInjection": "1.0.0-*",
-        "Microsoft.Dnx.Runtime": "1.0.0-*"
+        "Microsoft.Extensions.DependencyInjection": "1.0.0-*"
       }
     }
   }

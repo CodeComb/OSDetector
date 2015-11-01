@@ -9,6 +9,7 @@ namespace CodeComb.Package.Sample
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine(OS.Current.ToString());
             Download.DownloadAndExtractAll("https://github.com/CodeCombResources/Test/archive/master.zip","c:\\test\\package\\").Wait();
             Console.Read();
         }
