@@ -12,20 +12,46 @@ namespace CodeComb.Package
 {
     public static class Download
     {
-        public async static Task DownloadAndExtract(
-    string uri,
-    params Tuple<string, string>[] files)
+        public async static Task DownloadAndExtractAll(string uri, string dest)
         {
             var tmpFile = Path.GetTempPath() + "codecomb_" + Guid.NewGuid().ToString() + ".zip";
-            if (!File.Exists(tmpFile))
+            Console.WriteLine("Downloading from " + uri);
+            using (var webClient = new HttpClient() { Timeout = new TimeSpan(1, 0, 0), MaxResponseContentBufferSize = 1024 * 1024 * 50 })
             {
-                Console.WriteLine("Downloading from " + uri);
-                using (var webClient = new HttpClient() { Timeout = new TimeSpan(1, 0, 0), MaxResponseContentBufferSize = 1024 * 1024 * 50 })
+                var bytes = await webClient.GetByteArrayAsync(uri);
+                File.WriteAllBytes(tmpFile, bytes);
+                Console.WriteLine("Downloaded");
+            }
+            using (var fileStream = new FileStream(tmpFile, FileMode.Open))
+            using (var archive = new ZipArchive(fileStream))
+            {
+                foreach (var x in archive.Entries)
                 {
-                    var bytes = await webClient.GetByteArrayAsync(uri);
-                    File.WriteAllBytes(tmpFile, bytes);
-                    Console.WriteLine("Downloaded");
+                    if (!Directory.Exists(Path.GetDirectoryName(dest + x.FullName)))
+                        Directory.CreateDirectory(Path.GetDirectoryName(dest + x.FullName));
+                    if (x.Length == 0 && string.IsNullOrEmpty(Path.GetExtension(x.FullName)))
+                        continue;
+                    using (var entryStream = x.Open())
+                    using (var destStream = File.OpenWrite(dest + x.FullName))
+                    {
+                        entryStream.CopyTo(destStream);
+                    }
                 }
+            }
+            File.Delete(tmpFile);
+        }
+
+        public async static Task DownloadAndExtract(
+            string uri,
+            params Tuple<string, string>[] files)
+        {
+            var tmpFile = Path.GetTempPath() + "codecomb_" + Guid.NewGuid().ToString() + ".zip";
+            Console.WriteLine("Downloading from " + uri);
+            using (var webClient = new HttpClient() { Timeout = new TimeSpan(1, 0, 0), MaxResponseContentBufferSize = 1024 * 1024 * 50 })
+            {
+                var bytes = await webClient.GetByteArrayAsync(uri);
+                File.WriteAllBytes(tmpFile, bytes);
+                Console.WriteLine("Downloaded");
             }
             using (var fileStream = new FileStream(tmpFile, FileMode.Open))
             using (var archive = new ZipArchive(fileStream))
