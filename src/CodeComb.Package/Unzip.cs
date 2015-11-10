@@ -13,12 +13,15 @@ namespace CodeComb.Package
             {
                 foreach (var x in archive.Entries)
                 {
-                    if (!Directory.Exists(Path.GetDirectoryName(dest + x.FullName)))
-                        Directory.CreateDirectory(Path.GetDirectoryName(dest + x.FullName));
+                    var path = dest + x.FullName;
+                    if (OS.Current != OSType.Windows)
+                        path = path.Replace("\\", "/");
+                    if (!Directory.Exists(Path.GetDirectoryName(path)))
+                        Directory.CreateDirectory(Path.GetDirectoryName(path));
                     if (x.Length == 0 && string.IsNullOrEmpty(Path.GetExtension(x.FullName)))
                         continue;
                     using (var entryStream = x.Open())
-                    using (var destStream = File.OpenWrite(dest + x.FullName))
+                    using (var destStream = File.OpenWrite(path))
                     {
                         entryStream.CopyTo(destStream);
                     }
