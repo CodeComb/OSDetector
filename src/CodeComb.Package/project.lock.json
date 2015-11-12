@@ -395,7 +395,7 @@
           "ref/dotnet/System.Diagnostics.Debug.dll": {}
         }
       },
-      "System.Diagnostics.Process/4.0.0-beta-23409": {
+      "System.Diagnostics.Process/4.1.0-beta-23409": {
         "type": "package",
         "dependencies": {
           "System.IO": "4.0.0",
@@ -1735,7 +1735,7 @@
           "ref/dotnet/System.Diagnostics.Debug.dll": {}
         }
       },
-      "System.Diagnostics.Process/4.0.0-beta-23409": {
+      "System.Diagnostics.Process/4.1.0-beta-23409": {
         "type": "package",
         "dependencies": {
           "System.IO": "4.0.0",
@@ -2853,7 +2853,7 @@
           "ref/dotnet/System.Diagnostics.Debug.dll": {}
         }
       },
-      "System.Diagnostics.Process/4.0.0-beta-23409": {
+      "System.Diagnostics.Process/4.1.0-beta-23409": {
         "type": "package",
         "dependencies": {
           "System.IO": "4.0.0",
@@ -4260,10 +4260,10 @@
         "System.Diagnostics.Debug.nuspec"
       ]
     },
-    "System.Diagnostics.Process/4.0.0-beta-23409": {
+    "System.Diagnostics.Process/4.1.0-beta-23409": {
       "type": "package",
       "serviceable": true,
-      "sha512": "4K/9jyMa48SwPXRvIz37AhwgYeoAN4ZOCMM7E0N6u22CLujSWHLrJbNK0EdaLmZTXL0yvzxEeguux6QCNIUpCw==",
+      "sha512": "VLTAJH3qKr4UUJeoP75sTeTWCyvsX2RQD1JoaXrXrqGLE4VXIDBlJEFd/Llbtupq09DvRcKSJohownJh5M5x9A==",
       "files": [
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
@@ -4297,8 +4297,8 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "runtime.json",
-        "System.Diagnostics.Process.4.0.0-beta-23409.nupkg",
-        "System.Diagnostics.Process.4.0.0-beta-23409.nupkg.sha512",
+        "System.Diagnostics.Process.4.1.0-beta-23409.nupkg",
+        "System.Diagnostics.Process.4.1.0-beta-23409.nupkg.sha512",
         "System.Diagnostics.Process.nuspec"
       ]
     },
@@ -5709,13 +5709,13 @@
       "Microsoft.Dnx.Runtime >= 1.0.0-beta8",
       "Microsoft.Framework.DependencyInjection >= 1.0.0-beta8",
       "System.Collections >= 4.0.11-beta-23409",
-      "System.Diagnostics.Process >= 4.0.0-beta-23409",
       "System.IO.Compression >= 4.0.1-beta-23409",
       "System.Linq >= 4.0.1-beta-23409",
       "System.Net.Http >= 4.0.1-beta-23409",
       "System.Runtime >= 4.0.21-beta-23409",
       "System.Runtime.InteropServices.RuntimeInformation >= 4.0.0-beta-23409",
-      "System.Threading >= 4.0.11-beta-23409"
+      "System.Threading >= 4.0.11-beta-23409",
+      "System.Diagnostics.Process >= 4.1.0-beta-23409"
     ]
   }
 }
