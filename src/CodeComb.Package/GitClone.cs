@@ -15,11 +15,15 @@ namespace CodeComb.Package
 
     public static class GitClone
     {
-        public static GitCloneResult Clone(string uri, string dest , int timeLimit = 1000 * 60 * 20)
+        public static GitCloneResult Clone(string uri, string dest, string branch = null, int timeLimit = 1000 * 60 * 20)
         {
             if (!System.IO.Directory.Exists(dest))
                 System.IO.Directory.CreateDirectory(dest);
             Process p = new Process();
+
+            var argument = $"clone {uri}";
+            if (!string.IsNullOrEmpty(branch))
+                argument = $"clone {uri} -b {branch}";
 
             p.StartInfo = new ProcessStartInfo
             {
@@ -28,7 +32,7 @@ namespace CodeComb.Package
                 UseShellExecute = false,
                 CreateNoWindow = true,
                 FileName = "git",
-                Arguments = $"clone {uri}",
+                Arguments = argument,
                 WorkingDirectory = dest
             };
             p.Start();
