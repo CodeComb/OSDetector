@@ -1,9 +1,7 @@
 ﻿using System;
-#if DNXCORE50 || DNX451 || DOTNET5_4
-using Microsoft.Extensions.DependencyInjection;
-#endif
-#if DNXCORE50 || DOTNET5_4
+#if DOTNET5_5
 using System.Runtime.InteropServices;
+using Microsoft.Extensions.DependencyInjection;
 #endif
 
 namespace CodeComb.Package
@@ -21,7 +19,7 @@ namespace CodeComb.Package
         {
             get
             {
-#if DNXCORE50 || DOTNET5_4
+#if DOTNET5_5
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     return OSType.Windows;
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
