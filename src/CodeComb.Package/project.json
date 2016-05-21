@@ -1,13 +1,5 @@
 ﻿{
-  "title": "CodeComb.Package",
-  "version": "2.0.0-*",
-  "description": "ASP.Net vNext Package Management Library",
-  "copyright": "Harbin Code Comb Technology Co.,Ltd",
-  "authors": [ "AmamiyaYuuko" ],
-  "tags": [ "Localization" ,"vNext", "ASP.Net", "MVC" ],
-  "iconUrl": "http://www.1234.sh/images/logo.png",
-  "projectUrl": "https://github.com/CodeComb/Package",
-  "licenseUrl": "",
+  "version": "2.0.0-rc2-final",
 
   "frameworks": {
     "net451": {
@@ -16,21 +8,29 @@
         "System.Net.Http": "4.0.0.0"
       }
     },
-    "dotnet5.5": {
+    "netstandard1.5": {
       "dependencies": {
-        "Microsoft.CSharp": "4.0.1-*",
-        "System.Collections": "4.0.11-*",
-        "System.Linq": "4.0.1-*",
-        "System.Console": "4.0.0-*",
-        "System.Runtime": "4.0.21-*",
-        "System.Threading": "4.0.11-*",
-        "System.IO.FileSystem": "4.0.1-*",
-        "System.IO.Compression": "4.0.1-*",
-        "System.Net.Http": "4.0.1-*",
-        "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-*",
-        "System.Diagnostics.Process": "4.1.0-*",
-        "Microsoft.Extensions.DependencyInjection": "1.0.0-*"
-      }
+        "NETStandard.Library": {
+          "type": "platform",
+          "version": "1.5.0-rc2-24027"
+        },
+        "Microsoft.CSharp": "4.0.1-rc2-24027",
+        "System.Collections": "4.0.11-rc2-24027",
+        "System.Linq": "4.1.0-rc2-24027",
+        "System.Console": "4.0.0-rc2-24027",
+        "System.Runtime": "4.1.0-rc2-24027",
+        "System.Threading": "4.0.11-rc2-24027",
+        "System.IO.FileSystem": "4.0.1-rc2-24027",
+        "System.IO.Compression": "4.1.0-rc2-24027",
+        "System.Net.Http": "4.0.1-rc2-24027",
+        "System.Runtime.InteropServices.RuntimeInformation": "4.0.0-rc2-24027",
+        "System.Diagnostics.Process": "4.1.0-rc2-24027",
+        "Microsoft.Extensions.DependencyInjection": "1.0.0-rc2-final"
+      },
+      "imports": [
+        "dnxcore50",
+        "netstandard1.4"
+      ]
     }
   }
 }

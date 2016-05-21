@@ -1,5 +1,5 @@
 ﻿using System;
-#if DOTNET5_5
+#if NETSTANDARD1_5
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.DependencyInjection;
 #endif
@@ -19,7 +19,7 @@ namespace CodeComb.Package
         {
             get
             {
-#if DOTNET5_5
+#if NETSTANDARD1_5
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     return OSType.Windows;
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
